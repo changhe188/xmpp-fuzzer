@@ -5,7 +5,7 @@
  * 
  * 北京邮电大学计算机学院信息安全系
  * 
- * 作者：姜峰，常贺，李绅，李坚
+ * 作者：姜峰，常贺
  * 
  * 2009.6
  *  
@@ -23,7 +23,6 @@ public class XMPP_Fuzzer {
 		try {
 			new FuzzerUI_SWT();//SWT界面
 		} catch (SWTException e) {
-			// TODO Auto-generated catch block
 			System.out.println("Resource File Not Found!");
 		}
 	}

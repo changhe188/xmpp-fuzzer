@@ -10,7 +10,6 @@ public class AboutFuzzer extends Dialog{
 	Object result;
 	public AboutFuzzer(Shell parent) {
 		super(parent);
-		// TODO Auto-generated constructor stub
 	}
 	
 	public Object open() {
@@ -21,13 +20,13 @@ public class AboutFuzzer extends Dialog{
 		abt_layout.numColumns = 2;
 		abt_layout.horizontalSpacing = 15;
 		shell.setLayout(abt_layout);
-		Image icon = new Image(Display.getCurrent(), "image\\icon.jpg");
+		Image icon = new Image(Display.getCurrent(), "resource\\image\\icon.jpg");
 		shell.setSize(360,138);
 		
 		Label blank = new Label(shell,SWT.NONE);
 		blank.setImage(icon);
 		Label about = new Label(shell, SWT.NONE);
-		about.setText("XMPP Fuzzer , V1.0   2009\r\n盘古小分队\r\n\r\nUI设   计：常景路 \r\nFuzz核心：jf lj\r\n文档撰写：ls");
+		about.setText("XMPP Fuzzer , V1.0   2009\r\n盘古小分队\r\n\r\n");
 		
 		shell.open();
 		final Display display = parent.getDisplay();

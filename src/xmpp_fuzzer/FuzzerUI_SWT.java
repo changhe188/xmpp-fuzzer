@@ -30,14 +30,14 @@ public class FuzzerUI_SWT {
 	FuzzerUI_SWT() throws SWTException{
 		final Display display = new Display();
 		Color white = display.getSystemColor(SWT.COLOR_WHITE);	
-        final Image yellow = new Image(Display.getCurrent(), "image\\red1.jpg");//表示连接状态的图标
-        final Image green = new Image(Display.getCurrent(), "image\\green1.jpg");
-        final Image conGraphic = new Image(Display.getCurrent(), "image\\conGraphic.jpg");
+        final Image yellow = new Image(Display.getCurrent(), "resource\\image\\red1.jpg");//表示连接状态的图标
+        final Image green = new Image(Display.getCurrent(), "resource\\image\\green1.jpg");
+        final Image conGraphic = new Image(Display.getCurrent(), "resource\\image\\conGraphic.jpg");
         
 		final Shell shell = new Shell(display, SWT.MIN | SWT.CLOSE );//禁止最大化
 		shell.setLayout(new GridLayout());
 		shell.setText("XMPP Fuzzer");
-		Image icon = new Image(Display.getCurrent(), "image\\ico.png");
+		Image icon = new Image(Display.getCurrent(), "resource\\image\\ico.png");
         shell.setImage(icon);//本程序的图标 
 
 		createMenu(shell);	    
@@ -415,9 +415,8 @@ public class FuzzerUI_SWT {
 	    item2_1.addSelectionListener(new SelectionAdapter() {
 	    	public void widgetSelected(SelectionEvent e) {
 	    		try {
-	    			Runtime.getRuntime().exec("cmd /c \"document\\help.txt\"");
+	    			Runtime.getRuntime().exec("cmd /c \"resource\\document\\help.txt\"");
 				} catch (IOException e1) {
-					// TODO Auto-generated catch block
 					readArea.append("[系统]帮助文档丢失！\n");
 				}    
 	    	}
